@@ -1,0 +1,25 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container content">
+<h1> Parcel Details  </h1>
+<br>
+<h1>Parcel {{ object.id }}</h1>
+<p> from : {{ object.sender_name }} {{ object.sender_surname }}</p>
+<p> Parcel Price: {{ object.price }}</p>
+<p> Address From: {{ object.from_address }}</p>
+<p> Address To: {{ object.to_address }}</p>
+<p> Parcel Type: {{ object.get_parcel_type_display  }}</p>
+<br>
+    <a href="{% url 'index' %}"
+                   class="mt-4 btn btn-primary" style="margin: 10px;"> На главную </a>
+  <a href="{% url 'parcels_list' %}"
+               class="mt-4 btn btn-primary" style="margin: 10px;">К списку</a>
+  <a href="{% url 'parcel_update' object.id %}"
+               class="mt-4 btn btn-primary" style="margin: 10px;">Редактировать</a>
+  <a href="{% url 'parcel_delete' object.id %}"
+               class="mt-4 btn btn-primary" style="margin: 10px;">Удалить</a>
+<br>
+</div>
+{% endblock %}

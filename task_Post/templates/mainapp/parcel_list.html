@@ -1,0 +1,26 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container content">
+  <h1>Parcel List</h1>
+<br>
+  {% if parcel_list %}
+    <ul>
+      {% for parcel in parcel_list %}
+      <li>
+        <a href="{% url 'parcel_view' parcel.id  %}"> Parcel {{parcel.id}}     from: {{ parcel.sender_name }} {{ parcel.sender_surname }}</a>
+        ({{parcel.get_parcel_type_display }})
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no parcels to show.</p>
+  {% endif %}
+   <a href="{% url 'parcel_create' %}"
+               class="mt-4 btn btn-primary" style="margin: 10px;">Новая Посылка</a>
+    <a href="{% url 'index' %}"
+                   class="mt-4 btn btn-primary" style="margin: 10px;"> На главную </a>
+</div>
+{% endblock %}

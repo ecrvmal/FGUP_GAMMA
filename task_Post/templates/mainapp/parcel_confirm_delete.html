@@ -1,0 +1,19 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container content">
+<h1> Confirm Parcel Delete </h1>
+<br>
+<form method="post">{% csrf_token %}
+
+<p>Are you sure you want to delete "{{ object }}"?</p>
+
+    <input class="mt-4 btn btn-primary" style="margin: 10px;" type="submit" value="Удалить">
+    <a href="{% url 'parcels_list' %}"
+                   class="mt-4 btn btn-primary" style="margin: 10px;"> Отменить </a>
+        <a href="{% url 'index' %}"
+                   class="mt-4 btn btn-primary" style="margin: 10px;"> На главную </a>
+</form>
+</div>
+{% endblock %}

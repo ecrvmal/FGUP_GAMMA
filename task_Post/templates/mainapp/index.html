@@ -1,0 +1,21 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container content">
+<h1> Welcome to POST web-page!</h1>
+  <ul class="list-group">
+
+            <li class="list-group-item">
+                <a href="{% url 'letters_list' %}"
+                   style="text-decoration: none"> Работа с письмами </a>
+            </li>
+                  <li class="list-group-item">
+                <a href="{% url 'parcels_list' %}"
+                   style="text-decoration: none"> Работа с посылками </a>
+            </li>
+
+        </ul>
+</div>
+
+{% endblock %}

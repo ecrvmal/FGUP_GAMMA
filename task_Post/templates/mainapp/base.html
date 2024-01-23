@@ -13,16 +13,7 @@
         <link rel="stylesheet" type="text/css"
               href="{% static 'css/style.css' %}">
         <link rel="stylesheet" type="text/css"
-            href="{% static 'css/stars.css' %}">
-
-        <link rel="stylesheet" type="text/css"
             href="{% static 'css/fontawesome.min.css' %}">
-        <link rel="stylesheet" type="text/css"
-                href="{% static 'css/brands.min.css' %}">
-        <link rel="stylesheet" type="text/css"
-                href="{% static 'css/solid.min.css' %}">
-
-
     {% endblock %}
     {% block js %}
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
@@ -46,9 +37,9 @@
 
 </div>
 </body>
-<footer>
+
     {% block footer %}
         {% include 'includes/inc_footer.html' %}
     {% endblock %}
-</footer>
+
 </html>

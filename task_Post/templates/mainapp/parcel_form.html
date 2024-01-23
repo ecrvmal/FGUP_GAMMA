@@ -1,0 +1,17 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container content">
+<h1> Parcel Create Form </h1>
+<br>
+
+
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input class="mt-4 btn btn-primary" style="margin: 10px;" type="submit" value="Создать">
+     <a href="{% url 'parcels_list' %}"
+                   class="mt-4 btn btn-primary" style="margin: 10px;"> Отменить </a>
+</form>
+</div>
+{% endblock %}

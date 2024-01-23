@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -118,7 +118,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = ''
+STATIC_URL = '/static/'
+STATICFILES_DIRS = ('static',)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -126,19 +130,19 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-LETTER_TYPES = [
-    "Ordinary Letter",
-    "Registered Letter",
-    "Valuable Letter",
-    "Express Letter",
-]
+LETTER_TYPES = (
+    (1, "Ordinary Letter"),
+    (2, "Registered Letter"),
+    (3, "Valuable Letter"),
+    (4, "Express Letter"),
+)
 
 
 PARCEL_TYPES = [
-    "Small Parcel",
-    "Ordinary Parcel",
-    "1-st Class Parcel",
-    "Valuable Parcel",
-    "International Parcel",
-    "Express Parcel",
+    (1, "Small Parcel"),
+    (2, "Ordinary Parcel"),
+    (3, "1-st Class Parcel"),
+    (4, "Valuable Parcel"),
+    (5, "International Parcel"),
+    (6, "Express Parcel"),
 ]

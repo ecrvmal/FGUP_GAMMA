@@ -1,0 +1,15 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container content">
+<h1> Letter Create Form </h1>
+<br>
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Создать" class="mt-4 btn btn-primary" style="margin: 10px;">
+     <a href="{% url 'letters_list' %}"
+                   class="mt-4 btn btn-primary" style="margin: 10px;"> Отменить </a>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container content">
+  <h1>Letter List</h1>
+  <br>
+  {% if letter_list %}
+    <ul>
+      {% for letter in letter_list %}
+      <li>
+        <a href="{% url 'letter_view' letter.id  %}">Letter{{letter.id}}  From: {{ letter.sender_name }} {{ letter.sender_surname }}</a>
+        ({{letter.get_letter_type_display }})
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no letters to show.</p>
+  {% endif %}
+   <a href="{% url 'letter_create' %}"
+               class="mt-4 btn btn-primary" style="margin: 10px;"">Новое Письмо</a>
+    <a href="{% url 'index' %}"
+                   class="mt-4 btn btn-primary" style="margin: 10px;"> На главную </a>
+</div>
+{% endblock %}

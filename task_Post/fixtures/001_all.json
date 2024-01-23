@@ -1,0 +1,89 @@
+[
+{
+  "model": "mainapp.letter",
+  "pk": 2,
+  "fields": {
+    "sender_name": "name2",
+    "sender_surname": "surname2",
+    "from_address": "address2",
+    "to_address": "address3",
+    "from_index": 123,
+    "to_index": 456,
+    "letter_type": 3,
+    "letter_weight": 200
+  }
+},
+{
+  "model": "mainapp.letter",
+  "pk": 7,
+  "fields": {
+    "sender_name": "йцу",
+    "sender_surname": "йцу",
+    "from_address": "qwe",
+    "to_address": "qwe",
+    "from_index": 456,
+    "to_index": 456,
+    "letter_type": 3,
+    "letter_weight": 300
+  }
+},
+{
+  "model": "mainapp.letter",
+  "pk": 8,
+  "fields": {
+    "sender_name": "sdf",
+    "sender_surname": "sdf",
+    "from_address": "sdf",
+    "to_address": "sdfdfgd",
+    "from_index": 456,
+    "to_index": 456,
+    "letter_type": 1,
+    "letter_weight": 300
+  }
+},
+{
+  "model": "mainapp.parcel",
+  "pk": 3,
+  "fields": {
+    "sender_name": "name1",
+    "sender_surname": "surnname1",
+    "from_address": "address1",
+    "to_address": "address3",
+    "from_index": 123,
+    "to_index": 456,
+    "phone": "234",
+    "parcel_type": 1,
+    "price": "500.00"
+  }
+},
+{
+  "model": "mainapp.parcel",
+  "pk": 4,
+  "fields": {
+    "sender_name": "name1",
+    "sender_surname": "surnname22",
+    "from_address": "address2",
+    "to_address": "address1",
+    "from_index": 123,
+    "to_index": 456,
+    "phone": "+79166192222",
+    "parcel_type": 1,
+    "price": "567.00"
+  }
+},
+{
+  "model": "mainapp.parcel",
+  "pk": 5,
+  "fields": {
+    "sender_name": "name5",
+    "sender_surname": "surnname12",
+    "from_address": "address22",
+    "to_address": "address33",
+    "from_index": 123456,
+    "to_index": 654321,
+    "phone": "+79166192225",
+    "parcel_type": 1,
+    "price": "600.00"
+  }
+}
+]

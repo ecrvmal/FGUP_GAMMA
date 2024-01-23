@@ -1,0 +1,25 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container content">
+<h1> Letter Details </h1>
+<br>
+
+<h1>Letter {{ object.id }}</h1>
+<p> from : {{ object.sender_name }} {{ object.sender_surname }}</p>
+<p> weight: {{ object.weight }}</p>
+<p> from_address: {{ object.from_address }}</p>
+<p> to_address: {{ object.to_address }}</p>
+<p> Letter Type: {{ object.get_letter_type_display  }}</p>
+
+    <a href="{% url 'index' %}"
+                   class="mt-4 btn btn-primary" style="margin: 10px;"> На главную </a>
+  <a href="{% url 'letters_list' %}"
+  class="mt-4 btn btn-primary" style="margin: 10px;">Обратно</a>
+  <a href="{% url 'letter_update' object.id %}"
+               class="mt-4 btn btn-primary" style="margin: 10px;">Редактировать</a>
+  <a href="{% url 'letter_delete' object.id %}"
+               class="mt-4 btn btn-primary" style="margin: 10px;">Удалить</a>
+    </div>
+{% endblock %}
