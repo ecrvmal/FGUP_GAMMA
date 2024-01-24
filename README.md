@@ -34,18 +34,16 @@ to run Django project on test server please enter commands below:
 ```bash
 cd task_Post
 pip install -r requirements.txt
-python manage.py runserver 80
+python manage.py runserver
 ```
 After you started test server, please open browser and enter as web address: 
 ```bash
-http://127.0.0.1
+http://127.0.0.1:8000
 ```
 After that you will get access to working web page.
 
 
 ## FAQ
-
-
 
 ### Как запустить тесты
 Тесты запускаем из директории src
