@@ -8,7 +8,7 @@
 <form method="post">{% csrf_token %}
     {{ form.as_p }}
     <input class="mt-4 btn btn-primary" style="margin: 10px;" type="submit" value="Сохранить">
-     <a href="{% url 'letters_list' %}"
+     <a href="{% url 'parcels_list' %}"
                    class="mt-4 btn btn-primary" style="margin: 10px;"> Отменить </a>
 </form>
 </div>

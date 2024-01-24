@@ -3,11 +3,11 @@
 
 {% block content %}
 <div class="container content">
-<h1> Conferm Letter Delete </h1>
+<h1> Confirm Letter Delete </h1>
 <br>
 <form method="post">{% csrf_token %}
 
-<p>Are you sure you want to delete "{{ object }}"?</p>
+<p>Are you sure you want to delete Letter No.{{ object.id }}  of Type: {{object.get_letter_type_display }}"?</p>
 
     <input type="submit" class="mt-4 btn btn-primary" style="margin: 10px;" value="Удалить">
     <a href="{% url 'letters_list' %}"
