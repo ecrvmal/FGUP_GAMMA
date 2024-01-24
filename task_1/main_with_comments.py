@@ -9,8 +9,8 @@
 # Output:
 # result = [[1, 2, 0], [1, 0, 3], [2, 0, 3], [0, 3, 0], [0, 0, 4]]
 
-# nums: list[int] = [1, 2, 0, 3, 0, 4]
-nums: list[int] = [1, 2, 3, 4, 5, 0, 0]
+nums: list[int] = [1, 2, 0, 3, 0, 4]
+
 kpi_count: int = 0
 
 print(f'{nums=}')
