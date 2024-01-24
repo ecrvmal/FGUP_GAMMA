@@ -30,11 +30,6 @@ class LetterListView(ListView):
     model = Letter
     template_name = "letter_list.html"
 
-    # def get_context_data(self, pk=None, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['letter_type'] = letter.get_letter_type_display()
-    #     return context
-
     def get_queryset(self):
         return Letter.objects.all()
 
