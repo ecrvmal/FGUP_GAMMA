@@ -36,11 +36,18 @@ cd task_post
 pip install -r requirements.txt
 python manage.py runserver
 ```
-After you started test server, please open browser and enter as web address: 
+After you started test server,   
+please open browser and enter as web address: 
+for web-interface : 
 ```bash
 http://127.0.0.1:8000
 ```
 After that you will get access to working web page.
+
+for API-interface enter in web-browser: 
+```bash
+http://127.0.0.1:8000/api/
+```
 
 
 ## FAQ
