@@ -28,11 +28,11 @@ python main_with_comments.py
 
 2. Django project
 
-Folder 'task_Post'
+Folder 'task_post'
 
 to run Django project on test server please enter commands below:
 ```bash
-cd task_Post
+cd task_post
 pip install -r requirements.txt
 python manage.py runserver
 ```
