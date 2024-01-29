@@ -2,7 +2,11 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.views.generic import (CreateView, DeleteView, ListView,
                                   TemplateView, UpdateView, View, DetailView)
+from rest_framework.viewsets import ModelViewSet
+
 from mainapp.models import Letter, Parcel
+
+from mainapp.serializer import LetterModelSerializer, ParcelModelSerializer
 
 
 class MainPageView(TemplateView):
@@ -119,5 +123,16 @@ class ParcelDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('parcels_list')
+
+
+class LetterModelViewSet(ModelViewSet):
+    queryset = Letter.objects.all()
+    serializer_class = LetterModelSerializer
+
+
+class ParcelModelViewSet(ModelViewSet):
+    queryset = Parcel.objects.all()
+    serializer_class = ParcelModelSerializer
+
 
 

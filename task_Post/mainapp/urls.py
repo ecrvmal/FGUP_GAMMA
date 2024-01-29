@@ -1,5 +1,12 @@
-from django.urls import path
 from mainapp import views
+from rest_framework.routers import DefaultRouter
+from django.urls import path, include
+
+from mainapp.views import LetterModelViewSet, ParcelModelViewSet
+
+router = DefaultRouter()
+router.register('letter', LetterModelViewSet)
+router.register('parcel', ParcelModelViewSet)
 
 
 urlpatterns = [
@@ -15,4 +22,5 @@ urlpatterns = [
     path("parcel_update/<int:pk>/", views.ParcelUpdateView.as_view(), name="parcel_update"),
     path("parcel_view/<int:pk>/", views.ParcelView.as_view(), name="parcel_view", ),
     path("parcel_delete/<int:pk>/", views.ParcelDeleteView.as_view(), name="parcel_delete", ),
+    path('api/', include(router.urls)),
 ]
